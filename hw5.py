@@ -21,6 +21,9 @@ def read_number(a):
         return "팔"
     elif a == 9:
         return "구"
+    elif a == 0:
+        return "영"
+    
     
 
 num = input("세 자리 정수 입력 :")
