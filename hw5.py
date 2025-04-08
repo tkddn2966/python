@@ -1,6 +1,13 @@
 def read_single_digit(n):
-    a = int(n)
-    return a
+    if len(n) == 3:
+        print(read_number(int(n[0])), end =" ")
+        print(read_number(int(n[1])), end =" ")
+        print(read_number(int(n[2])), end =" ")
+    elif len(n) == 2:
+        print(read_number(int(n[0])), end =" ")
+        print(read_number(int(n[1])), end =" ")
+    elif len(n) == 1:
+        print(read_number(int(n[0])), end =" ")
 
 def read_number(a):
     if a == 1:
@@ -27,23 +34,6 @@ def read_number(a):
     
 
 num = input("세 자리이하 정수 입력 :")
+read_single_digit(num)
 
-if len(num) == 3:
-    res = read_single_digit(num[0])
-    print(read_number(res), end =" ")
-    res = read_single_digit(num[1])
-    print(read_number(res), end =" ")
-    res = read_single_digit(num[2])
-    print(read_number(res), end =" ")
-
-elif len(num) == 2:
-    res = read_single_digit(num[0])
-    print(read_number(res), end =" ")
-    res = read_single_digit(num[1])
-    print(read_number(res), end =" ")
-
-elif len(num) == 1:
-    res = read_single_digit(num[0])
-    print(read_number(res), end =" ")
     
-
