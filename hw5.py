@@ -1,5 +1,5 @@
 def read_single_digit(n):
-    a = int(n[0])
+    a = int(n)
     return a
 
 def read_number(a):
@@ -26,10 +26,24 @@ def read_number(a):
     
     
 
-num = input("세 자리 정수 입력 :")
-res = read_single_digit(num[0])
-print(read_number(res), end =" ")
-res = read_single_digit(num[1])
-print(read_number(res), end =" ")
-res = read_single_digit(num[2])
-print(read_number(res), end =" ")
+num = input("세 자리이하 정수 입력 :")
+
+if len(num) == 3:
+    res = read_single_digit(num[0])
+    print(read_number(res), end =" ")
+    res = read_single_digit(num[1])
+    print(read_number(res), end =" ")
+    res = read_single_digit(num[2])
+    print(read_number(res), end =" ")
+
+elif len(num) == 2:
+    res = read_single_digit(num[0])
+    print(read_number(res), end =" ")
+    res = read_single_digit(num[1])
+    print(read_number(res), end =" ")
+
+elif len(num) == 1:
+    res = read_single_digit(num[0])
+    print(read_number(res), end =" ")
+    
+
