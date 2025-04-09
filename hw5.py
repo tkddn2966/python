@@ -1,15 +1,4 @@
-def read_single_digit(n):
-    if len(n) == 3:
-        print(read_number(int(n[0])), end =" ")
-        print(read_number(int(n[1])), end =" ")
-        print(read_number(int(n[2])), end =" ")
-    elif len(n) == 2:
-        print(read_number(int(n[0])), end =" ")
-        print(read_number(int(n[1])), end =" ")
-    elif len(n) == 1:
-        print(read_number(int(n[0])), end =" ")
-
-def read_number(a):
+def read_single_digit(a):
     if a == 1:
         return "일"
     elif a == 2:
@@ -30,10 +19,14 @@ def read_number(a):
         return "구"
     elif a == 0:
         return "영"
-    
-    
+
+def read_number(n):
+    return read_single_digit(int(n))
 
 num = input("세 자리이하 정수 입력 :")
-read_single_digit(num)
+
+print(read_number(num[0]), end =" ")
+print(read_number(num[1]), end =" ")
+print(read_number(num[2]), end =" ")
 
     
