@@ -35,7 +35,7 @@ def read_number(n):
     
         
 
-num = input("세 자리이하 정수 입력 :")
+num = input("양의 정수 입력 :")
 
 read_number(num)
 
