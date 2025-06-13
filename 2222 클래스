@@ -1,0 +1,38 @@
+클래스
+self를 이용해 자신의 다른 속성에 접근 가능
+
+class circle:
+    def getcircumference(self):
+        result = 2 * 3.14 * self.radius 자신의 radius라는 데이터 멤버의 값을 참조하라는 
+        return result
+        
+    def gearea(self):
+        result = 3.14 * self.radius **2
+        return
+        
+small = circle()
+small.radius = 1 객체 small의 반지름 속성을 1로 설정
+
+생성자
+class circle:
+    def __init__(self,radius):
+        self.__radius = radius
+    def getcircumference(self):
+        result = 2 * 3.14 * self.__radius 자신의 radius라는 데이터 멤버의 값을 참조하라는 
+        return result
+        
+    def gearea(self):
+        result = 3.14 * self.radius **2
+        return
+        
+small = circle(1) 객체 small의 반지름 속성을 1로 설정
+
+클래스 변수
+객체마다 똑같은 변수를 가진다면,
+class aaa():
+    __bb = 1234
+    def __init__(self):
+        pass
+
+
+
