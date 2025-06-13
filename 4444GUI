@@ -6,13 +6,13 @@ from tkinter import ttk
 class mianwin:
 	def __init__(self):
 		self.win = tk.Tk()
-    self.win.title("타이틀제목") #제목
-    self.__bulidgui()
+    		self.win.title("타이틀제목") #제목
+    		self.__bulidgui()
 
 	def __bulidgui(self):
 		pass
 
-  def start(self):
+  	def start(self):
 		self.win.mainloop()
 
 win = mainwin()
@@ -24,46 +24,46 @@ self.win.geometry("창의너비*창의높이+가로위치값+세로위치값)
 self.win.resizable(width=False,height=False)
 
 ttk 위젯의 특정 옵션값 변경 및 레이블위젯
-label1 = ttk.Label(self.win,text="문자열")
-label1.configure(foreground="색",background="색",font=("폰트",글자크기))
-label1.pack()
+self.label1 = ttk.Label(self.win,text="문자열")
+self.label1.configure(foreground="색",background="색",font=("폰트",글자크기))
+self.label1.pack()
 
 ttk 스타일링
 
-style = Style()
-style.configure("스타일이름", 번경옵션이름1 = 값1) 
+self.style = Style()
+self.style.configure("스타일이름", 번경옵션이름1 = 값1) 
 스타일이름은 정해져있음 "새스타일으름.기존스타일이름"
 ex) Button = TButton 거의다 앞에 T만 붙이면 됨
 
 푸시 버튼 위젯 ttk.Button
-객체이름 = ttk.Button(self.win, text="텍스트",command=) 주의 커멘드 함수 이름뒤에 ()붙으면 안됨
-객체이름.pack()
+self.객체이름 = ttk.Button(self.win, text="텍스트",command=) 주의 커멘드 함수 이름뒤에 ()붙으면 안됨
+self.객체이름.pack()
 
 한 줄 입력 위젯 ttk.Entry
-변수객체이름 = tk.StringVar(), tk.IntVar(), tk.DoubleVar()
+self.변수객체이름 = tk.StringVar(), tk.IntVar(), tk.DoubleVar()
 객체이름 = ttk.Entry(self.win, textvariable=변수객체이름)
-변수객체이름.get() 입력값 반환
-변수객체이름.set() 출력값 설정
+self.변수객체이름.get() 입력값 반환
+self.변수객체이름.set() 출력값 설정
 
-객체이름.pack()
+self.객체이름.pack()
 
 
 텍스트 위젯 tk.Text
 여러 줄로 된 문자열 입력이 필요한 경우
 
-객체이름 = tk.Text(self.win, width=폭,height=높이,wrap=줄바꿈처리방식)
+self.객체이름 = tk.Text(self.win, width=폭,height=높이,wrap=줄바꿈처리방식)
 줄바꿈 처리방식 tk.CHAR 문자 단위로 tk.WORD 단어 단위로
-객체이름.pack()
+self.객체이름.pack()
 
 스크롤 가능한 텍스트 위젯 ScrolledText
 from tkinter import scrolledtext
-객체이름 = scrolledtext.ScrolledText(self.win, width=폭,height=높이,wrap=줄바꿈처리방식)
-객체이름.pack()
+self.객체이름 = scrolledtext.ScrolledText(self.win, width=폭,height=높이,wrap=줄바꿈처리방식)
+self.객체이름.pack()
 
 체크 버튼 위젯 ttk.Checkbutton
 변수객체이름= tk.IntVar()
-객체이름 = ttk.Checkbutton(self.win, text="문자열",variable = 변수객체이름,command=)
-객체이름.pack()
+self.객체이름 = ttk.Checkbutton(self.win, text="문자열",variable = 변수객체이름,command=)
+self.객체이름.pack()
 1:체크가 선택된 상태
 0:체크가 해제된 상태
 
@@ -74,23 +74,22 @@ messagebox.showinfo("박스 이름",f"내용")
 라디오 버튼 위젯 ttk.Radiobutton
 
 변수객체이름 = tk.IntVar()
-객체 이름 = ttk.Radiobutton(self.win, text="문자열", variable = 변수객체이름, value = 각버튼의식별아이디값,command=)
+self.객체 이름 = ttk.Radiobutton(self.win, text="문자열", variable = 변수객체이름, value = 각버튼의식별아이디값,command=)
 키워드 인수 value에 각 버튼 식별값(아이디)지정 -> 이 체크버튼의 값을 알려주는거임
 
 위젯의 배치 방향 지장
-객체이름.pack() 위에서부터
-객체이름.pack(side=tk.LEFT)
+self.객체이름.pack() 위에서부터
+self.객체이름.pack(side=tk.LEFT)
 
 위젯의 여백 지정
 ipadx : 위젯의 왼쪽과 오른쪽의 안쪽 여백
 ipady : 위쪽과 아래쪽의 안쪽 여백
-
 padx : 위젯의 왼쪽과 오른쪽의 바깥 여백
 pady : 위쪽과 아래쪽의 바깥 여백
-객체이름.pack()
+self.객체이름.pack()
 
 gird배치 정렬
-객체이름.grid(row=0,column=0, sticky="w") sticky= 정렬방향 # n,e,s,w (북(위),남(아래),동(오른),서())
+self.객체이름.grid(row=0,column=0, sticky="w") sticky= 정렬방향 # n,e,s,w (북(위),남(아래),동(오른),서())
 
 grid배치 셀 합치기
 columnspan: 가로 방향의 셀들을 합치는 효과
@@ -102,7 +101,8 @@ def __bulidgui(self):
 
 def __~~(self):
   frame = ttk.Frame(self.win)
-  객체= 위젯(frame, ~~)
+  self.객체= 위젯(frame, ~~)
+  self.객체.pack()
   return frame
 
 
