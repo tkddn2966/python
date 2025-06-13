@@ -1,0 +1,28 @@
+import os
+from datetime import datetime
+
+
+class Time:
+    def __init__(self,h=00,m=00):
+        self.__h = h
+        self.__m = m
+
+    def display(self):
+        print(f"{self.__h:02d}:{self.__m:02d}")
+
+    def add(self,time):
+        h = self.__h + time.__h
+        m = self.__m + time.__m 
+        if m >= 60:
+            h += 1
+            m -= 60
+        return Time(h,m)
+
+    @staticmethod
+    def isvalid(h,m):
+        if 0 <= h <=24 and 0<= m < 60:
+            return True
+        else:
+            return False
+
+filename = "last.dat"
