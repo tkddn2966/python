@@ -1,0 +1,48 @@
+파일 열기
+
+파일객체이름 = open("대상파일이름",mode= "열기모드",encoding="utf-8")
+파일객체이름.close()
+
+파일 존재 여부 검사 예
+import os
+
+filename = "ex.txt"
+if os.path.exists(filename):
+    file = open(filename,"r"):
+    file.close()
+
+with 키워드로 안전하게 파일 닫기
+with open("파일이름","열기모드",encoding = "utf-8") as 파일객체이름:  -> 파일객체이름.close를 안써도 됨
+
+텍스트 파일에 쓰기 예
+file.write("asdf")
+
+텍스트 파일로부터 한 번에 읽기
+file.read() 모든 내용을 하나의 문자열로 반환
+
+텍스트 파일로부터 한 줄씩 구분해 읽기
+file.readline() 텍스트 파일의 각 행을 리스트로 반환
+lines = []
+with open("ex.txt","r",encoding="utf-8") as file:
+    while True:
+        line = file.readline()
+        if line == "":
+          break
+        lines.append(line.strip()) 문자열 line 앞뒤의 공백문자를 제거해서 리스트에 추가
+== 
+        for line in file: 파일 객체 flie로부터 한 행씩 문자열로 읽어드려 line에 저장
+            lines.append(line.strip("\n"))
+
+
+이진파일 입력
+import pickle
+pickle.dump(저장할 데이터, 이진모드로 열린 파일객체)
+
+이진파일 출력
+pickle.load(이진모드로 열린 파일객체)
+
+
+
+
+
+        
