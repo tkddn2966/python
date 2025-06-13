@@ -61,12 +61,15 @@ from tkinter import scrolledtext
 객체이름.pack()
 
 체크 버튼 위젯 ttk.Checkbutton
-
 변수객체이름= tk.IntVar()
 객체이름 = ttk.Checkbutton(self.win, text="문자열",variable = 변수객체이름,command=)
 객체이름.pack()
 1:체크가 선택된 상태
 0:체크가 해제된 상태
+
+메시지박스
+from tkinter import messagebox
+messagebox.showinfo("박스 이름",f"내용")
 
 라디오 버튼 위젯 ttk.Radiobutton
 
@@ -87,7 +90,7 @@ pady : 위쪽과 아래쪽의 바깥 여백
 객체이름.pack()
 
 gird배치 정렬
-객체이름.grid(row=0,column=0, sticky="w") sticky= 정렬방향 # n,e,s,w (북,남,동,서)
+객체이름.grid(row=0,column=0, sticky="w") sticky= 정렬방향 # n,e,s,w (북(위),남(아래),동(오른),서())
 
 grid배치 셀 합치기
 columnspan: 가로 방향의 셀들을 합치는 효과
